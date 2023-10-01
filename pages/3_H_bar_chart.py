@@ -70,7 +70,37 @@ tab1, tab2, tab3 = st.tabs(["Altair", "Plotly", "Matplotlib"])
 
 with tab1:
    # Display Vega-Altair Chart
-   st.altair_chart(altair_chart) 
+   st.altair_chart(altair_chart):
+      with st.expander("Code *Vega-Altair*"):
+    # Display the code
+    code = '''
+import streamlit as st
+import altair as alt
+import pandas as pd
+
+# Create a sample dataframe
+data = pd.DataFrame({
+  'Category': ['A', 'B', 'C', 'D', 'E'],
+  'Value': [10, 15, 7, 10, 8],
+  'Color': ['red', 'blue', 'green', 'orange', 'purple']
+})
+
+# Create a bar chart with custom colors
+altair_chart = alt.Chart(data).mark_bar().encode(
+    x='Value',
+    y='Category',
+    color='Color'
+).properties(
+    width=400,
+    height=400,
+    title='My Horizontal Bar Chart'
+)
+
+# Display Vega-Altair Horizontal Bar Chart
+st.altair_chart(altair_chart)
+'''
+  # Display the code
+    st.code(code, language='python')
  
 with tab2:
     # Display Plotly Chart
