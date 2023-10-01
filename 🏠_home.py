@@ -36,6 +36,9 @@ st.subheader("🚀Objectifs d'apprentissage🚀")
 st.markdown("A la fin de ce cours, les étudiants seront capables de :")
 
 
+st.write("Made with ❤️ by me")
+
+
 
 
 st.markdown("")
