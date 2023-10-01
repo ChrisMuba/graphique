@@ -12,7 +12,7 @@ data = pd.DataFrame({
 })
 
 # Create a pie chart
-chart = alt.Chart(data).mark_arc().encode(
+altair_chart = alt.Chart(data).mark_arc().encode(
    alt.Theta('Value:Q', stack=True),
    alt.Color('Category:N')
 ).properties(
@@ -33,7 +33,7 @@ data = {
 }
 
 # Create a pie chart
-fig = px.pie(data, values='Value', names='Category', title='My Pie Chart')
+plotly_chart = px.pie(data, values='Value', names='Category', title='My Pie Chart')
 
 # Matplotlib
 import matplotlib.pyplot as plt
@@ -45,13 +45,9 @@ data = {
 }
 
 # Create a pie chart
-fig, ax = plt.subplots()
+matplotlib_chart, ax = plt.subplots()
 ax.pie(data['Value'], labels=data['Category'], autopct='%1.1f%%')
 ax.set_title('My Pie Chart')
-
-st.pyplot(fig)
-
-
 
 
 
@@ -59,14 +55,14 @@ st.pyplot(fig)
 tab1, tab2, tab3 = st.tabs(["Altair", "Plotly", "Matplotlib"])
 
 with tab1:
-   #Display Vega-Altair Chart
-   st.altair_chart(chart) 
-   #Display Plotly Chart
+   # Display Vega-Altair Chart
+   st.altair_chart(altair_chart) 
+   # Display Plotly Chart
 with tab2:
-   st.plotly_chart(fig)
-
+   st.plotly_chart(plotly_chart)
+   # Display Matplotlib Chart
 with tab3:
-   st.pyplot(fig)
+   st.pyplot(matplotlib_chart)
    
 # Expanders
 with st.expander("Code Vega-Altair"):
@@ -87,7 +83,7 @@ with st.expander("Code Vega-Altair"):
 
     :blue[*Create a pie chart*]
     
-    chart = alt.Chart(data).mark_arc().encode(
+    altair_chart = alt.Chart(data).mark_arc().encode(
         alt.Theta('Value:Q', stack=True),
         alt.Color('Category:N')
     ).properties(
@@ -100,7 +96,7 @@ with st.expander("Code Vega-Altair"):
     
     :blue[*Display Pie Chart*]
     
-    st.altair_chart(chart)
+    st.altair_chart(altair_chart)
     """)
 
 with st.expander("Code *Plotly*"):
@@ -119,11 +115,36 @@ with st.expander("Code *Plotly*"):
 
     :blue[*Create a pie chart*]
     
-    fig = px.pie(data, values='Value', names='Category', title='My Pie Chart')
+    plotly_chart = px.pie(data, values='Value', names='Category', title='My Pie Chart')
 
     :blue[*Display Pie Chart*]
     
-    st.plotly_chart(fig)
+    st.plotly_chart(plotly_chart)
+    """)
+
+with st.expander("Code *Matplotlib*"):
+    st.write("""
+
+    :blue[*import necessary libraries*]
+    
+    import matplotlib.pyplot as plt
+
+    :blue[*Create a sample dataframe*]
+    
+    data = {
+    'Category': ['A', 'B', 'C', 'D', 'E'],
+    'Value': [10, 15, 7, 10, 8]
+    }
+
+    :blue[*Create a pie chart*]
+    
+   matplotlib_chart, ax = plt.subplots()
+   ax.pie(data['Value'], labels=data['Category'], autopct='%1.1f%%')
+   ax.set_title('My Pie Chart')
+
+    :blue[*Display Pie Chart*]
+    
+    st.pyplot(matplotlib_chart)
     """)
    
 
