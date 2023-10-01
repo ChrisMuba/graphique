@@ -4,7 +4,7 @@ import streamlit as st
 
 st.title("Bienvenue dans la :blue[galerie graphique de l'analyste de données !]")
 
-st.sidebar.success("📊Selectionner un graphique.📈")
+st.sidebar.success("Selectionner un graphique.📈")
 
 
 st.caption("Vous souhaitez faire analyser vos data, prendre des décisions éclairées ou bénéficier d'un tutorat personnalisé ? parlons‑en : 📧https://www.linkedin.com/in/chris-muba-io 🌍")
