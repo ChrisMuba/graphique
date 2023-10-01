@@ -26,7 +26,7 @@ altair_chart = alt.Chart(data).mark_bar().encode(
 
 
 
-   # Plotly
+# Plotly
 import streamlit as st
 import plotly.graph_objects as go
 
@@ -40,6 +40,26 @@ data = {
 # Create a bar chart with custom colors
 plotly_chart = go.Figure(data=[go.Bar(x=data['Category'], y=data['Value'], marker=dict(color=data['Color']))])
 plotly_chart.update_layout(title='My Bar Chart')
+
+
+# Matplotlib
+import matplotlib.pyplot as plt
+import pandas as pd
+
+# Create a sample dataframe
+data = pd.DataFrame({
+  'Category': ['A', 'B', 'C', 'D', 'E'],
+  'Value': [10, 15, 7, 10, 8],
+  'Color': ['red', 'blue', 'green', 'orange', 'purple']
+})
+
+# Create a bar chart with custom colors
+matplotlib_chart.bar(data['Category'], data['Value'], color=data['Color'])
+matplotlib_chart.xlabel('Category')
+matplotlib_chart.ylabel('Value')
+matplotlib_chart.title('My Bar Chart')
+
+
 
 
 
