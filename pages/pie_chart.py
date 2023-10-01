@@ -26,7 +26,7 @@ st.altair_chart(chart)
 with st.expander("Code"):
     st.write("""
 
-    # import necessary libraries
+    *import necessary libraries*
     
     import streamlit as st
     import altair as alt
