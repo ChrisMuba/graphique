@@ -71,15 +71,43 @@ tab1, tab2, tab3 = st.tabs(["Altair", "Plotly", "Matplotlib"])
 with tab1:
    # Display Vega-Altair Chart
    st.altair_chart(altair_chart) 
-   # Display Plotly Chart
+ 
 with tab2:
+    # Display Plotly Chart
    st.plotly_chart(plotly_chart)
-   # Display Matplotlib Chart
-with tab3:
-   st.pyplot(plt)
-  with st.expander("Code *Matplotlib*"):
+      with st.expander("Code *Plotly*"):
     # Display the code
     code = '''
+import streamlit as st
+import plotly.graph_objects as go
+
+# Create a sample data
+data = {
+  'Category': ['A', 'B', 'C', 'D', 'E'],
+  'Value': [10, 15, 7, 10, 8],
+  'Color': ['red', 'blue', 'green', 'orange', 'purple']
+}
+
+# Create a horizontal bar chart with custom colors
+plotly_chart = go.Figure(data=[go.Bar(x=data['Value'], y=data['Category'], orientation='h', marker=dict(color=data['Color']))])
+plotly_chart.update_layout(title='My Horizontal Bar Chart')
+plotly_chart.update_xaxes(title_text='Value')
+plotly_chart.update_yaxes(title_text='Category')
+
+
+# Display Plotly Horizontal Bar Chart
+st.plotly_chart(plotly_chart)
+'''
+  # Display the code
+    st.code(code, language='python')
+   
+with tab3:
+  # Display Matplotlib Chart
+   st.pyplot(plt):
+      with st.expander("Code *Matplotlib*"):
+    # Display the code
+    code = '''
+import streamlit as st
 import matplotlib.pyplot as plt
 
 # Create a sample data
