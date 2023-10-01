@@ -9,9 +9,9 @@ data = [10, 20, 30, 40, 50]
 st.title("Bar Chart Example")
 
 # Create a Cutecharts chart
-chart = cutecharts.BarChart(
+chart = cutecharts.Chart(
     data=data,
-    orientation="h",
+    type="bar",
     width=800,
     height=400,
     title="Bar Chart Example",
