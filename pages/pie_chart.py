@@ -30,15 +30,14 @@ import plotly.express as px
 
 # Create a sample dataframe
 data = {
-  'Category': ['A', 'B', 'C', 'D', 'E'],
-  'Value': [10, 15, 7, 10, 8]
+  'Category': ['A', 'B', 'C', 'D'],
+  'Value': [10, 15, 7, 10]
 }
 
 # Create a pie chart
 fig = px.pie(data, values='Value', names='Category', title='My Pie Chart')
 
-
-
+# Onglets
 tab1, tab2 = st.tabs(["Altair", "Plotly"])
 
 with tab1:
@@ -48,9 +47,8 @@ with tab1:
 with tab2:
    st.plotly_chart(fig)
    
-
-
-with st.expander("Code"):
+# Expanders
+with st.expander("Code Vega-Altair"):
     st.write("""
 
     :blue[*import necessary libraries*]
@@ -84,7 +82,7 @@ with st.expander("Code"):
     st.altair_chart(chart)
     """)
 
-with st.expander("Code"):
+with st.expander("Code *Plotly*"):
     st.write("""
 
     :blue[*import necessary libraries*]
@@ -94,8 +92,8 @@ with st.expander("Code"):
     :blue[*Create a sample dataframe*]
     
     data = {
-    'Category': ['A', 'B', 'C', 'D', 'E'],
-    'Value': [10, 15, 7, 10, 8]
+    'Category': ['A', 'B', 'C', 'D'],
+    'Value': [10, 15, 7, 10]
     }
 
     :blue[*Create a pie chart*]
