@@ -1,7 +1,18 @@
 
 import streamlit as st
 
-# Vega-Altair
+
+
+
+
+
+
+import streamlit as st
+
+tab1, tab2 = st.tabs(["Altair", "Plotly"])
+
+with tab1:
+   # Vega-Altair
 import altair as alt
 import pandas as pd
 
@@ -25,28 +36,6 @@ chart = alt.Chart(data).mark_arc().encode(
 
 st.altair_chart(chart)
 
-#Plotly
-import plotly.express as px
-
-# Create a sample dataframe
-data = {
-  'Category': ['A', 'B', 'C', 'D', 'E'],
-  'Value': [10, 15, 7, 10, 8]
-}
-
-# Create a pie chart
-fig = px.pie(data, values='Value', names='Category', title='My Pie Chart')
-
-st.plotly_chart(fig)
-
-
-
-import streamlit as st
-
-tab1, tab2 = st.tabs(["Altair", "Plotly"])
-
-with tab1:
-   st.altair_chart(chart)
    with st.expander("Code"):
     st.write("""
 
@@ -81,7 +70,19 @@ with tab1:
     st.altair_chart(chart)
     """)
 with tab2:
-   st.plotly_chart(fig)
+   #Plotly
+import plotly.express as px
+
+# Create a sample dataframe
+data = {
+  'Category': ['A', 'B', 'C', 'D', 'E'],
+  'Value': [10, 15, 7, 10, 8]
+}
+
+# Create a pie chart
+fig = px.pie(data, values='Value', names='Category', title='My Pie Chart')
+
+st.plotly_chart(fig)
    with st.expander("Code"):
     st.write("""
 
