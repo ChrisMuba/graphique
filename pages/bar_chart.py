@@ -55,13 +55,14 @@ data = pd.DataFrame({
 })
 
 # Create a bar chart with custom colors
-matplotlib_chart.bar(data['Category'], data['Value'], color=data['Color'])
-matplotlib_chart.xlabel('Category')
-matplotlib_chart.ylabel('Value')
-matplotlib_chart.title('My Bar Chart')
+plt.bar(data['Category'], data['Value'], color=data['Color'])
+plt.xlabel('Category')
+plt.ylabel('Value')
+plt.title('My Bar Chart')
 
 # Display the chart using Streamlit
-st.pyplot(matplotlib_chart)
+st.pyplot(plt)
+
 
 
 
@@ -78,7 +79,7 @@ with tab2:
    st.plotly_chart(plotly_chart)
    # Display Matplotlib Chart
 with tab3:
-   st.pyplot(matplotlib_chart)
+   st.pyplot(plt)
    
 # Expanders
 with st.expander("Code Vega-Altair"):
