@@ -62,12 +62,12 @@ p.axis.axis_label=None
 p.axis.visible=False
 p.grid.grid_line_color = None
 
-st.bokeh_chart(p)
 
 
 
-# Onglets "Altair", "Plotly" &
-tab1, tab2 = st.tabs(["Altair", "Plotly"])
+
+# Onglets "Altair", "Plotly" & "Bokeh"
+tab1, tab2, tab3 = st.tabs(["Altair", "Plotly", "Bokeh"])
 
 with tab1:
    #Display Vega-Altair Chart
@@ -75,6 +75,9 @@ with tab1:
    #Display Plotly Chart
 with tab2:
    st.plotly_chart(fig)
+
+with tab3:
+   st.bokeh_chart(p)
    
 # Expanders
 with st.expander("Code Vega-Altair"):
