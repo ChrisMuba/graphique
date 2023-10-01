@@ -1,5 +1,7 @@
 
 
+
+
 import streamlit as st
 import altair as alt
 import pandas as pd
@@ -38,7 +40,8 @@ col1, col2, col3 = st.columns(3)
 # Add content to each column
 with col1:
     st.altair_chart(altair_chart)
-    st.code('''
+    with st.expander("Code *Altair*"):
+        st.code('''
 import altair as alt
 import pandas as pd
 
@@ -62,11 +65,12 @@ altair_chart = alt.Chart(data).mark_arc().encode(
 
 # Display Altair Pie Chart
 st.altair_chart(altair_chart)
-''')
+''', language='python')
 
 with col2:
     st.plotly_chart(plotly_chart)
-    st.code('''
+    with st.expander("Code *Plotly*"):
+        st.code('''
 import plotly.express as px
 import pandas as pd
 
@@ -81,11 +85,12 @@ plotly_chart = px.pie(data, values='Value', names='Category', title='My Pie Char
 
 # Display Plotly Pie Chart
 st.plotly_chart(plotly_chart)
-''')
+''', language='python')
 
 with col3:
     st.pyplot(matplotlib_chart)
-    st.code('''
+    with st.expander("Code *Matplotlib*"):
+        st.code('''
 import matplotlib.pyplot as plt
 import pandas as pd
 
@@ -102,4 +107,5 @@ ax.set_title('My Pie Chart')
 
 # Display Matplotlib Pie Chart
 st.pyplot(matplotlib_chart)
-''')
+''', language='python')
+
