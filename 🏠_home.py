@@ -16,9 +16,11 @@ st.subheader("À propos")
 
 st.markdown("Êtes-vous un analyste de données débutant qui a du mal à créer des graphiques et des visualisations à l'aide de Python ? Cherchez pas plus loin! La galerie graphique de l'analyste de données est là pour rendre votre journée plus facile.")
 
-st.markdown("Êtes-vous fatigué de passer des heures à écrire du code pour créer des graphiques simples ?")
+st.markdown("Cette application Streamlit est votre destination unique pour explorer différents types de graphiques et de visualisations, ainsi que les extraits de code commentés correspondants.") 
 
-            Cherchez pas plus loin! La galerie graphique de notre analyste de données est là pour faciliter votre voyage.")
+st.markdown("Nous avons inclus des exemples utilisant des packages de visualisation de données populaires tels que :blue[*Altair, Plotly et Matplotlib*].")
+
+
 
 st.subheader("🚀Objectifs d'apprentissage🚀")
 
