@@ -27,6 +27,13 @@ st.markdown("🎯Évaluer la validité des conclusions statistiques basées sur 
 st.markdown("🎯Appliquer des techniques statistiques aux problèmes liés aux RH")
 
 
+import streamlit as st
+
+code = '''def hello():
+    print("Hello, Streamlit!")'''
+st.code(code, language='python')
+
+
 st.markdown("")
 
 
