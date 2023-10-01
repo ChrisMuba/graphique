@@ -6,6 +6,8 @@ st.title("Bienvenue dans la :blue[galerie graphique de l'analyste de données !]
 
 st.sidebar.success("Selectionner un graphique.")
 
+st.write("Made with ❤️ by me")
+
 st.subheader("Formateur : Christian MUBA - Data Analyst RH")
 
 st.caption("*Master Gestion & Master Sciences (IAE Dijon & UB Dijon)*")
@@ -38,7 +40,7 @@ st.subheader("🚀Objectifs d'apprentissage🚀")
 st.markdown("A la fin de ce cours, les étudiants seront capables de :")
 
 
-st.write("Made with ❤️ by me")
+
 
 
 
