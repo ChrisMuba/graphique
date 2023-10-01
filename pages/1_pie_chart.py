@@ -1,9 +1,10 @@
 
-import streamlit as st
 
-# Vega-Altair
+import streamlit as st
 import altair as alt
 import pandas as pd
+import plotly.express as px
+import matplotlib.pyplot as plt
 
 # Create a sample dataframe
 data = pd.DataFrame({
@@ -11,7 +12,7 @@ data = pd.DataFrame({
    'Value': [10, 15, 7, 10]
 })
 
-# Create a pie chart
+# Create a pie chart using Altair
 altair_chart = alt.Chart(data).mark_arc().encode(
    alt.Theta('Value:Q', stack=True),
    alt.Color('Category:N')
@@ -23,122 +24,82 @@ altair_chart = alt.Chart(data).mark_arc().encode(
    'identity'
 )
 
-# Plotly
-import plotly.express as px
-
-# Create a sample dataframe
-data = {
-  'Category': ['A', 'B', 'C', 'D'],
-  'Value': [10, 15, 7, 10]
-}
-
-# Create a pie chart
+# Create a pie chart using Plotly
 plotly_chart = px.pie(data, values='Value', names='Category', title='My Pie Chart')
 
-# Matplotlib
-import matplotlib.pyplot as plt
-
-# Create a sample dataframe
-data = {
-  'Category': ['A', 'B', 'C', 'D'],
-  'Value': [10, 15, 7, 10]
-}
-
-# Create a pie chart
+# Create a pie chart using Matplotlib
 matplotlib_chart, ax = plt.subplots()
 ax.pie(data['Value'], labels=data['Category'], autopct='%1.1f%%')
 ax.set_title('My Pie Chart')
 
 # Create tabs
-tabs = st.tabs(["Vega-Altair", "Plotly", "Matplotlib"])
+tab1, tab2, tab3 = st.beta_columns(3)
 
-if tabs[0]:
-    # Display Vega-Altair Chart
+# Add content to each tab
+with tab1:
     st.altair_chart(altair_chart)
-    # Display Vega-Altair Code
-    with st.expander("Code Vega-Altair"):
-        st.code("""
-        #import necessary libraries
-        
-        import streamlit as st
-        
-        import altair as alt
-        
-        import pandas as pd
-    
-        #Create a sample dataframe
-        
-        data = pd.DataFrame({
-        'Category': ['A', 'B', 'C', 'D'],
-        'Value': [10, 15, 7, 10]
-        })
-    
-        #Create a pie chart
-        
-        altair_chart = alt.Chart(data).mark_arc().encode(
-            alt.Theta('Value:Q', stack=True),
-            alt.Color('Category:N')
-        ).properties(
-            width=400,
-            height=400,
-            title='My Pie Chart'  # Add your title here
-        ).project(
-            'identity'
-        )
-        
-        # Display Pie Chart
-        
-        st.altair_chart(altair_chart)
-        """)
-elif tabs[1]:
-    # Display Plotly Chart
+    st.code('''
+import altair as alt
+import pandas as pd
+
+# Create a sample dataframe
+data = pd.DataFrame({
+   'Category': ['A', 'B', 'C', 'D'],
+   'Value': [10, 15, 7, 10]
+})
+
+# Create a pie chart using Altair
+altair_chart = alt.Chart(data).mark_arc().encode(
+   alt.Theta('Value:Q', stack=True),
+   alt.Color('Category:N')
+).properties(
+   width=400,
+   height=400,
+   title='My Pie Chart'  # Add your title here
+).project(
+   'identity'
+)
+
+# Display Altair Pie Chart
+st.altair_chart(altair_chart)
+''')
+
+with tab2:
     st.plotly_chart(plotly_chart)
-    # Display Plotly Code
-    with st.expander("Code Plotly"):
-        st.code("""
-        # import necessary libraries
-        
-        import plotly.express as px
-    
-        # Create a sample dataframe
-        
-        data = {
-        'Category': ['A', 'B', 'C', 'D'],
-        'Value': [10, 15, 7, 10]
-        }
-    
-        # Create a pie chart
-        
-        plotly_chart = px.pie(data, values='Value', names='Category', title='My Pie Chart')
-    
-        # Display Pie Chart
-        
-        st.plotly_chart(plotly_chart)
-        """)
-else:
-    # Display Matplotlib Chart
+    st.code('''
+import plotly.express as px
+import pandas as pd
+
+# Create a sample dataframe
+data = pd.DataFrame({
+   'Category': ['A', 'B', 'C', 'D'],
+   'Value': [10, 15, 7, 10]
+})
+
+# Create a pie chart using Plotly
+plotly_chart = px.pie(data, values='Value', names='Category', title='My Pie Chart')
+
+# Display Plotly Pie Chart
+st.plotly_chart(plotly_chart)
+''')
+
+with tab3:
     st.pyplot(matplotlib_chart)
-    # Display Matplotlib Code
-    with st.expander("Code Matplotlib"):
-        st.code("""
-        # import necessary libraries
-        
-        import matplotlib.pyplot as plt
-    
-        # Create a sample dataframe
-        
-        data = {
-        'Category': ['A', 'B', 'C', 'D'],
-        'Value': [10, 15, 7, 10]
-        }
-    
-        # Create a pie chart
-        
-        matplotlib_chart, ax = plt.subplots()
-        ax.pie(data['Value'], labels=data['Category'], autopct='%1.1f%%')
-        ax.set_title('My Pie Chart')
-    
-        # Display Pie Chart
-        
-        st.pyplot(matplotlib_chart)
-        """)
+    st.code('''
+import matplotlib.pyplot as plt
+import pandas as pd
+
+# Create a sample dataframe
+data = pd.DataFrame({
+   'Category': ['A', 'B', 'C', 'D'],
+   'Value': [10, 15, 7, 10]
+})
+
+# Create a pie chart using Matplotlib
+matplotlib_chart, ax = plt.subplots()
+ax.pie(data['Value'], labels=data['Category'], autopct='%1.1f%%')
+ax.set_title('My Pie Chart')
+
+# Display Matplotlib Pie Chart
+st.pyplot(matplotlib_chart)
+''')
