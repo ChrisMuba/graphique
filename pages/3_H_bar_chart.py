@@ -181,6 +181,9 @@ plt.xlabel('X')
 plt.ylabel('Y')
 plt.title('My Line Plot')
 
+# Display the plot
+st.pyplot(plt)
+
 # Display the code and plot within an expander
 with st.expander("Code and Plot"):
     # Display the code
@@ -202,8 +205,7 @@ plt.show()
 '''
     st.code(code, language='python')
 
-    # Display the plot
-    st.pyplot(plt)
+    
 
    
 
