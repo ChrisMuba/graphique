@@ -32,8 +32,7 @@ st.markdown("🎯**Vitrine de code** : notre application est conçue pour être 
 
 st.markdown("🎯**Comparaison des packages** : comparez la façon dont le même graphique peut être créé à l’aide de différents packages. Découvrez les avantages et les inconvénients de chaque approche.")
 
-st.markdown("🎯**Utile pour tous** : que vous soyez un analyste de données débutant cherchant à améliorer vos compétences en visualisation de données ou un professionnel chevronné en quête d'inspiration, notre avons quelque chose pour vous. Alors pourquoi attendre ? Commencez à explorer dès maintenant et faites passer votre visualisation de données au niveau supérieur !
-")
+st.markdown("🎯**Utile pour tous** : que vous soyez un analyste de données débutant cherchant à améliorer vos compétences en visualisation de données ou un professionnel chevronné en quête d'inspiration, notre avons quelque chose pour vous. Alors pourquoi attendre ? Commencez à explorer dès maintenant et faites passer votre visualisation de données au niveau supérieur !")
 
 st.markdown("🎯**Apprenez à votre rythme** : que vous soyez un apprenant visuel ou que vous préfériez plonger directement dans le code, notre galerie s'adapte à votre style d'apprentissage.")
 
