@@ -36,7 +36,7 @@ with tab1:
 
     st.altair_chart(chart)
 
-        with st.expander("Code"):
+    with st.expander("Code"):
     st.write("""
 
     :blue[*import necessary libraries*]
