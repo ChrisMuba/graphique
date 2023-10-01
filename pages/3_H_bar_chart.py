@@ -76,8 +76,8 @@ with tab2:
    st.plotly_chart(plotly_chart)
    # Display Matplotlib Chart
 with tab3:
-   st.pyplot(plt):
-      with st.expander("Code *Matplotlib*"):
+   st.pyplot(plt)
+       with st.expander("Code *Matplotlib*"):
     # Display the code
     code = '''
 import matplotlib.pyplot as plt
