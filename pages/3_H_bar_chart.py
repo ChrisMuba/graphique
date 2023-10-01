@@ -38,7 +38,7 @@ data = {
 }
 
 # Create a bar chart with custom colors
-plotly_chart = go.Figure(data=[go.Bar(x=data['Category'], y=data['Value'], marker=dict(color=data['Color']))])
+plotly_chart = go.Figure(data=[go.Bar(x=data['Value'], y=data['Category'], marker=dict(color=data['Color']))])
 plotly_chart.update_layout(title='My Bar Chart')
 
 
@@ -56,8 +56,8 @@ data = pd.DataFrame({
 
 # Create a bar chart with custom colors
 plt.bar(data['Category'], data['Value'], color=data['Color'])
-plt.xlabel('Category')
-plt.ylabel('Value')
+plt.xlabel('Value')
+plt.ylabel('Category')
 plt.title('My Bar Chart')
 
 
