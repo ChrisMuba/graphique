@@ -34,11 +34,11 @@ matplotlib_chart, ax = plt.subplots()
 ax.pie(data['Value'], labels=data['Category'], autopct='%1.1f%%')
 ax.set_title('My Pie Chart')
 
-# Create columns
-col1, col2, col3 = st.columns(3)
+# Create tabs
+tab1, tab2, tab3 = st.tabs(["Altair", "Plotly", "Matplotlib"])
 
 # Add content to each column
-with col1:
+with tab1:
     st.altair_chart(altair_chart)
     with st.expander("Code *Altair*"):
         st.code('''
@@ -67,7 +67,7 @@ altair_chart = alt.Chart(data).mark_arc().encode(
 st.altair_chart(altair_chart)
 ''', language='python')
 
-with col2:
+with tab2:
     st.plotly_chart(plotly_chart)
     with st.expander("Code *Plotly*"):
         st.code('''
@@ -87,7 +87,7 @@ plotly_chart = px.pie(data, values='Value', names='Category', title='My Pie Char
 st.plotly_chart(plotly_chart)
 ''', language='python')
 
-with col3:
+with tab3:
     st.pyplot(matplotlib_chart)
     with st.expander("Code *Matplotlib*"):
         st.code('''
