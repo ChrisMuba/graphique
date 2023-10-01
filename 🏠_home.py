@@ -12,9 +12,13 @@ st.caption("*Ancien coordinateur apprentissage CFA académique / Académie de Di
 
 st.caption("Vous souhaitez faire analyser vos data RH, prendre des décisions éclairées ou bénéficier d'un tutorat personnalisé ? contactez-moi 📧https://www.linkedin.com/in/chris-muba-io 🌍")
 
-st.subheader("Description du cours")
+st.subheader("À propos")
 
-st.markdown("Ce cours offre une introduction aux statistiques pour les professionnels des ressources humaines. L'accent est mis sur la compréhension de la façon d'analyser et d'interpréter les données statistiques pour prendre des décisions éclairées. Les sujets couverts comprennent la collecte de données, les mesures de la tendance centrale et de la variabilité, la probabilité, les tests d'hypothèses, la corrélation et la régression.")
+st.markdown("Êtes-vous un analyste de données débutant qui a du mal à créer des graphiques et des visualisations à l'aide de Python ? Cherchez pas plus loin! La galerie graphique de l'analyste de données est là pour rendre votre journée plus facile.")
+
+st.markdown("Êtes-vous fatigué de passer des heures à écrire du code pour créer des graphiques simples ?")
+
+            Cherchez pas plus loin! La galerie graphique de notre analyste de données est là pour faciliter votre voyage.")
 
 st.subheader("🚀Objectifs d'apprentissage🚀")
 
