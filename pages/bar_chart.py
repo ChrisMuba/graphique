@@ -60,12 +60,6 @@ plt.xlabel('Category')
 plt.ylabel('Value')
 plt.title('My Bar Chart')
 
-# Display the chart using Streamlit
-st.pyplot(plt)
-
-
-
-
 
 
 # Onglets "Altair", "Plotly" & "Bokeh"
