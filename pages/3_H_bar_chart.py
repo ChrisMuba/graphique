@@ -156,12 +156,13 @@ with st.expander("Code *Matplotlib*"):
     :blue[*Display Pie Chart*]
     
     st.pyplot(matplotlib_chart)
-    import streamlit as st
-
-    code = '''def hello():
-        print("Hello, Streamlit!")'''
-    st.code(code, language='python')
     """)
+
+import streamlit as st
+
+code = '''def hello():
+    print("Hello, Streamlit!")'''
+st.code(code, language='python')
    
 
 
