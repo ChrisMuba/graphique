@@ -58,10 +58,10 @@ data = pd.DataFrame({
 })
 
 # Create a bar chart with custom colors
-plt.bar(data['Category'], data['Value'], color=data['Color'])
+plt.barh(data['Category'], data['Value'], color=data['Color'])
 plt.xlabel('Value')
 plt.ylabel('Category')
-plt.title('My Bar Chart')
+plt.title('My Horizontal Bar Chart')
 
 
 
