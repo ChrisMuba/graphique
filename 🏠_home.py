@@ -10,6 +10,8 @@ st.sidebar.success("Selectionner un graphique.")
 st.caption("Vous souhaitez faire analyser vos data, prendre des décisions éclairées ou bénéficier d'un tutorat personnalisé ? parlons‑en : 📧https://www.linkedin.com/in/chris-muba-io 🌍")
 
 
+st.subheader("À propos")
+
 st.markdown("Êtes-vous un analyste de données débutant qui a du mal à créer des graphiques et des visualisations à l'aide de Python🐍 ? Cherchez pas plus loin ! :blue[La galerie graphique de l'analyste de données] est là pour rendre votre journée plus facile.")
 
 st.markdown("Notre application Streamlit est votre destination unique pour explorer différents types de graphiques et de visualisations, ainsi que les extraits de code commentés correspondants.") 
