@@ -11,10 +11,10 @@ df=pd.DataFrame({
 # Bar Chart
 chart = ctc.Bar("Toronto Temperature",width="500px",height="400px")
 chart.set_options(
- labels=list(df[‘x’]),
+ labels=list(df[x]),
  x_label="Days",
  y_label="Temperature (Celsius)" ,
  colors=[‘#1EAFAE’ for i in range(len(df))]
  )
-chart.add_series('This week',list(df[‘y’]))
+chart.add_series('This week',list(df[y]))
 chart.render_notebook()
