@@ -1,16 +1,15 @@
 
 import streamlit as st
-from cutecharts.charts import Line
+from cutecharts.charts import Bar
+from cutecharts.components import Page
+from cutecharts.faker import Faker
 
-# Create a line chart
-chart = Line("Line Chart")
-chart.set_options(
-    labels=["A", "B", "C", "D", "E", "F", "G"],
-    x_label="I'm xlabel",
-    y_label="I'm ylabel",
-)
-chart.add_series("series-A", [57, 134, 137, 129, 145, 60, 49])
-chart.add_series("series-B", [114, 55, 27, 101, 125, 27, 105])
+def bar_chart():
+    chart = Bar("My Cute Bar Chart")
+    chart.set_options(labels=Faker.choose(), x_label="X", y_label="Y")
+    chart.add_series("series-A", Faker.values())
+    return chart
 
-# Display the chart in the Streamlit app
-st.altair_chart(chart, use_container_width=True)
+
+st.title("Cutecharts Bar Chart with Streamlit")
+st.write(bar_chart().render_notebook())
