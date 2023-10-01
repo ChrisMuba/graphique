@@ -2,7 +2,7 @@
 
 import streamlit as st
 
-st.title("Cours de Statistiques :blue[appliquées aux Ressources Humaines]")
+st.title("Bienvenue dans la :blue[galerie graphique de l'analyste de données !]")
 
 st.subheader("Formateur : Christian MUBA - Data Analyst RH")
 
