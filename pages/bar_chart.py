@@ -9,13 +9,15 @@ import pandas as pd
 # Create a sample dataframe
 data = pd.DataFrame({
   'Category': ['A', 'B', 'C', 'D', 'E'],
-  'Value': [10, 15, 7, 10, 8]
+  'Value': [10, 15, 7, 10, 8],
+  'Color': ['red', 'blue', 'green', 'orange', 'purple']
 })
 
-# Create a bar chart
+# Create a bar chart with custom colors
 altair_chart = alt.Chart(data).mark_bar().encode(
     x='Category',
-    y='Value'
+    y='Value',
+    color='Color'
 ).properties(
     width=400,
     height=400,
@@ -23,6 +25,7 @@ altair_chart = alt.Chart(data).mark_bar().encode(
 )
 
 st.altair_chart(altair_chart)
+
 
 
    # Plotly
