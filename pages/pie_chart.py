@@ -74,7 +74,7 @@ st.plotly_chart(fig)
 
 import streamlit as st
 
-tab1, tab2n = st.tabs(["Altair", "Plotly"])
+tab1, tab2 = st.tabs(["Altair", "Plotly"])
 
 with tab1:
    st.altair_chart(chart)
