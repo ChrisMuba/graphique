@@ -8,6 +8,8 @@ import pandas as pd
 import plotly.express as px
 import matplotlib.pyplot as plt
 
+st.sidebar.success("Selectionner un graphique.")
+
 # Create a sample dataframe
 data = pd.DataFrame({
    'Category': ['A', 'B', 'C', 'D'],
