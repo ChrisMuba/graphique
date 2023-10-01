@@ -6,6 +6,8 @@ import pandas as pd
 import plotly.graph_objects as go
 import matplotlib.pyplot as plt
 
+st.sidebar.success("Selectionner un graphique.")
+
 # Create a sample dataframe
 data = pd.DataFrame({
   'Category': ['A', 'B', 'C', 'D', 'E'],
