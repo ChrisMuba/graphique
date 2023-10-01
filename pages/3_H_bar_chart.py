@@ -166,6 +166,45 @@ import streamlit as st
 code = '''def hello():
     print("Hello, Streamlit!")'''
 st.code(code, language='python')
+
+
+import streamlit as st
+import matplotlib.pyplot as plt
+
+# Create a sample data
+x = [1, 2, 3, 4, 5]
+y = [10, 15, 7, 12, 8]
+
+# Create a line plot
+plt.plot(x, y)
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.title('My Line Plot')
+
+# Display the code and plot within an expander
+with st.expander("Code and Plot"):
+    # Display the code
+    code = '''
+import matplotlib.pyplot as plt
+
+# Create a sample data
+x = [1, 2, 3, 4, 5]
+y = [10, 15, 7, 12, 8]
+
+# Create a line plot
+plt.plot(x, y)
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.title('My Line Plot')
+
+# Display the plot
+plt.show()
+'''
+    st.code(code, language='python')
+
+    # Display the plot
+    st.pyplot(plt)
+
    
 
 
