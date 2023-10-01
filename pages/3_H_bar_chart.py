@@ -21,7 +21,7 @@ altair_chart = alt.Chart(data).mark_bar().encode(
 ).properties(
     width=400,
     height=400,
-    title='My Bar Chart'
+    title='My Horizontal Bar Chart'
 )
 
 
