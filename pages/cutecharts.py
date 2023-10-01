@@ -1,23 +1,19 @@
 
 import streamlit as st
-import cutecharts
+import cutecharts.charts as ccc
 
-# Data for the chart
-data = [10, 20, 30, 40, 50]
+# Create a bar chart
+chart = ccc.BarChart()
 
-# Create a Streamlit app
-st.title("Bar Chart Example")
-
-# Create a Cutecharts chart
-chart = cutecharts.Chart(
-    data=data,
-    type="bar",
-    width=800,
-    height=400,
-    title="Bar Chart Example",
-    x_label="Values",
-    y_label="Frequency"
+# Add data to the chart
+chart.add_series(
+    name="Sales",
+    data=[10, 20, 30, 40, 50],
+    label_opts={"position": "top"},
 )
 
-# Display the chart in the Streamlit app
-st.write(chart)
+# Set the chart title
+chart.set_title("Sales by Month")
+
+# Display the chart
+st.altair_chart(chart, use_container_width=True)
