@@ -32,14 +32,14 @@ with st.expander("Code"):
     import altair as alt
     import pandas as pd
 
-    *Create a sample dataframe*
+    :blue[*Create a sample dataframe*]
     
     data = pd.DataFrame({
     'Category': ['A', 'B', 'C', 'D'],
     'Value': [10, 15, 7, 10]
     })
 
-    *Create a pie chart*
+    :blue[*Create a pie chart*]
     
     chart = alt.Chart(data).mark_arc().encode(
         alt.Theta('Value:Q', stack=True),
@@ -52,7 +52,7 @@ with st.expander("Code"):
         'identity'
     )
     
-    *Display Pie Chart*
+    :blue[*Display Pie Chart*]
     
     st.altair_chart(chart)
     """)
