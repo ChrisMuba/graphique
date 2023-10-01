@@ -40,8 +40,8 @@ import matplotlib.pyplot as plt
 
 # Create a sample dataframe
 data = {
-  'Category': ['A', 'B', 'C', 'D', 'E'],
-  'Value': [10, 15, 7, 10, 8]
+  'Category': ['A', 'B', 'C', 'D'],
+  'Value': [10, 15, 7, 10]
 }
 
 # Create a pie chart
@@ -132,8 +132,8 @@ with st.expander("Code *Matplotlib*"):
     :blue[*Create a sample dataframe*]
     
     data = {
-    'Category': ['A', 'B', 'C', 'D', 'E'],
-    'Value': [10, 15, 7, 10, 8]
+    'Category': ['A', 'B', 'C', 'D'],
+    'Value': [10, 15, 7, 10]
     }
 
     :blue[*Create a pie chart*]
