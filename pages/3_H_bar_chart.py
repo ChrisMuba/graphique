@@ -77,6 +77,30 @@ with tab2:
    # Display Matplotlib Chart
 with tab3:
    st.pyplot(plt)
+      with st.expander("Code *Matplotlib*"):
+    # Display the code
+    code = '''
+import matplotlib.pyplot as plt
+
+# Create a sample data
+data = pd.DataFrame({
+  'Category': ['A', 'B', 'C', 'D', 'E'],
+  'Value': [10, 15, 7, 10, 8],
+  'Color': ['red', 'blue', 'green', 'orange', 'purple']
+})
+
+# Create a bar chart with custom colors
+plt.barh(data['Category'], data['Value'], color=data['Color'])
+plt.xlabel('Value')
+plt.ylabel('Category')
+plt.title('My Horizontal Bar Chart')
+
+# Display Matplotlib Horizontal Bar Chart
+st.pyplot(plt)
+'''
+  # Display the code
+    st.code(code, language='python')
+
    
 # Expanders
 #with st.expander("Code Vega-Altair"):
