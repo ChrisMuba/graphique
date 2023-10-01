@@ -9,7 +9,7 @@ df=pd.DataFrame({
   z:[16, 16.4, 23.6, 24.5, 19.9, 13.6, 13.4]})
 
 # Bar Chart
-chart = ctc.Bar(‘Toronto Temperature’,width=’500px’,height=’400px’)
+chart = ctc.Bar("Toronto Temperature",width=’500px’,height=’400px’)
 chart.set_options(
  labels=list(df[‘x’]),
  x_label='Days',
