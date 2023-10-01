@@ -29,14 +29,10 @@ st.markdown("🎯**Comparaison des packages** : comparez la façon dont le même
 
 st.markdown("🎯**Utile pour tous** : que vous soyez un analyste de données débutant cherchant à améliorer vos compétences en visualisation de données ou un professionnel chevronné en quête d'inspiration, notre avons quelque chose pour vous. Alors pourquoi attendre ? Commencez à explorer dès maintenant et faites passer votre visualisation de données au niveau supérieur !")
 
-st.markdown("🎯**Apprenez à votre rythme** : que vous soyez un apprenant visuel ou que vous préfériez plonger directement dans le code, notre galerie s'adapte à votre style d'apprentissage.")
 
 
 
 
-st.subheader("🚀Objectifs d'apprentissage🚀")
-
-st.markdown("A la fin de ce cours, les étudiants seront capables de :")
 
 
 st.write("Made with ❤️ by me")
