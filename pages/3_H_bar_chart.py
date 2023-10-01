@@ -15,8 +15,8 @@ data = pd.DataFrame({
 
 # Create a bar chart with custom colors
 altair_chart = alt.Chart(data).mark_bar().encode(
-    x='Category',
-    y='Value',
+    x='Value',
+    y='Category',
     color='Color'
 ).properties(
     width=400,
