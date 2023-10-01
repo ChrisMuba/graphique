@@ -40,8 +40,8 @@ data = {
 # Create a horizontal bar chart with custom colors
 plotly_chart = go.Figure(data=[go.Bar(x=data['Value'], y=data['Category'], orientation='h', marker=dict(color=data['Color']))])
 plotly_chart.update_layout(title='My Horizontal Bar Chart')
-fig.update_xaxes(title_text='Value')
-fig.update_yaxes(title_text='Category')
+plotly_chart.update_xaxes(title_text='Value')
+plotly_chart.update_yaxes(title_text='Category')
 
 
 
