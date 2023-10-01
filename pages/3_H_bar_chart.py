@@ -13,7 +13,7 @@ data = pd.DataFrame({
   'Color': ['red', 'blue', 'green', 'orange', 'purple']
 })
 
-# Create a bar chart with custom colors
+# Create a horizontal bar chart with custom colors
 altair_chart = alt.Chart(data).mark_bar().encode(
     x='Value',
     y='Category',
@@ -37,9 +37,9 @@ data = {
   'Color': ['red', 'blue', 'green', 'orange', 'purple']
 }
 
-# Create a bar chart with custom colors
-plotly_chart = go.Figure(data=[go.Bar(x=data['Value'], y=data['Category'], marker=dict(color=data['Color']))])
-plotly_chart.update_layout(title='My Bar Chart')
+# Create a horizontal bar chart with custom colors
+plotly_chart = go.Figure(data=[go.Bar(x=data['Value'], y=data['Category'], orientation='h', marker=dict(color=data['Color']))])
+plotly_chart.update_layout(title='My Horizontal Bar Chart')
 
 
 # Matplotlib
