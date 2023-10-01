@@ -1,10 +1,9 @@
 
 import streamlit as st
-import roughviz
+import pandas as pd
+from roughviz.charts import Pie
 
-# Bar Chart
-import pandas as pd 
-d = {'Year': ['1980', '1981', '1982'], 'A': [3, 4, 10]}
-df = pd.DataFrame(data=d)
-roughviz.bar(df["Year"], df["A"], axisRoughness = 0.7, axisStrokeWidth = 0.7, roughness=2.3, highlight="gray")
+df = pd.DataFrame({"a": ["a", "b"], "b": [1, 2], "c": [2, 3]})
 
+# Pie Chart
+pie = Pie(data=df, labels="a", values="b")
