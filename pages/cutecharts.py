@@ -24,8 +24,8 @@ chart = alt.Chart(data).mark_arc().encode(
 st.altair_chart(chart)
 
 with st.expander("See explanation"):
-    st.write(\"\"\"
+    st.write("""
         The chart above shows some numbers I picked for you.
         I rolled actual dice for these, so they're *guaranteed* to
         be random.
-    \"\"\")
+    """)
