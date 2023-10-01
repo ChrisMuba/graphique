@@ -11,7 +11,7 @@ chart.set_options(
 )
 chart.add_series("series-A", [57, 134, 137, 129, 145, 60, 49])
 chart.add_series("series-B", [114, 55, 27, 101, 125, 27, 105])
-return chart
+    return chart
 
 
 st.title("Cutecharts Line Chart with Streamlit")
