@@ -79,10 +79,9 @@ with tab3:
    st.pyplot(plt)
    
 # Expanders
-with st.expander("Code Vega-Altair"):
+#with st.expander("Code Vega-Altair"):
    
-
-with st.expander("Code *Plotly*"):
+#with st.expander("Code *Plotly*"):
     
 with st.expander("Code *Matplotlib*"):
     # Display the code
