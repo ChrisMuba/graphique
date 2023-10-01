@@ -24,35 +24,22 @@ altair_chart = alt.Chart(data).mark_bar().encode(
     title='My Bar Chart'
 )
 
-st.altair_chart(altair_chart)
-
 
 
    # Plotly
-import plotly.express as px
+import streamlit as st
+import plotly.graph_objects as go
 
 # Create a sample dataframe
 data = {
-  'Category': ['A', 'B', 'C', 'D'],
-  'Value': [10, 15, 7, 10]
+  'Category': ['A', 'B', 'C', 'D', 'E'],
+  'Value': [10, 15, 7, 10, 8],
+  'Color': ['red', 'blue', 'green', 'orange', 'purple']
 }
 
-# Create a pie chart
-plotly_chart = px.pie(data, values='Value', names='Category', title='My Pie Chart')
-
-# Matplotlib
-import matplotlib.pyplot as plt
-
-# Create a sample dataframe
-data = {
-  'Category': ['A', 'B', 'C', 'D'],
-  'Value': [10, 15, 7, 10]
-}
-
-# Create a pie chart
-matplotlib_chart, ax = plt.subplots()
-ax.pie(data['Value'], labels=data['Category'], autopct='%1.1f%%')
-ax.set_title('My Pie Chart')
+# Create a bar chart with custom colors
+plotly_chart = go.Figure(data=[go.Bar(x=data['Category'], y=data['Value'], marker=dict(color=data['Color']))])
+plotly_chart.update_layout(title='My Bar Chart')
 
 
 
