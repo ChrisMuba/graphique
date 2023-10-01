@@ -35,39 +35,28 @@ data = {
 # Create a pie chart
 fig = px.pie(data, values='Value', names='Category', title='My Pie Chart')
 
-# Bokeh
-from bokeh.plotting import figure
-from bokeh.transform import cumsum
-from bokeh.palettes import Category20c
-from bokeh.models import ColumnDataSource
-import pandas as pd
+# Matplotlib
+import matplotlib.pyplot as plt
 
 # Create a sample dataframe
-data = pd.DataFrame({
+data = {
   'Category': ['A', 'B', 'C', 'D', 'E'],
   'Value': [10, 15, 7, 10, 8]
-})
+}
 
-data['angle'] = data['Value']/data['Value'].sum() * 2*pi
-data['color'] = Category20c[len(data)]
+# Create a pie chart
+fig, ax = plt.subplots()
+ax.pie(data['Value'], labels=data['Category'], autopct='%1.1f%%')
+ax.set_title('My Pie Chart')
 
-p = figure(plot_height=350, title="Pie Chart", toolbar_location=None,
-           tools="hover", tooltips="@Category: @Value", x_range=(-0.5, 1.0))
-
-p.wedge(x=0, y=1, radius=0.4,
-        start_angle=cumsum('angle', include_zero=True), end_angle=cumsum('angle'),
-        line_color="white", fill_color='color', legend_field='Category', source=data)
-
-p.axis.axis_label=None
-p.axis.visible=False
-p.grid.grid_line_color = None
+st.pyplot(fig)
 
 
 
 
 
 # Onglets "Altair", "Plotly" & "Bokeh"
-tab1, tab2, tab3 = st.tabs(["Altair", "Plotly", "Bokeh"])
+tab1, tab2, tab3 = st.tabs(["Altair", "Plotly", "Matplotlib"])
 
 with tab1:
    #Display Vega-Altair Chart
@@ -77,7 +66,7 @@ with tab2:
    st.plotly_chart(fig)
 
 with tab3:
-   st.bokeh_chart(p)
+   st.pyplot(fig)
    
 # Expanders
 with st.expander("Code Vega-Altair"):
