@@ -71,7 +71,9 @@ with st.expander("Code Vega-Altair"):
     :blue[*import necessary libraries*]
     
     import streamlit as st
+    
     import altair as alt
+    
     import pandas as pd
 
     :blue[*Create a sample dataframe*]
