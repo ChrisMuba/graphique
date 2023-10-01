@@ -51,7 +51,7 @@ with tab2:
 
 
 with st.expander("Code"):
-st.write("""
+    st.write("""
 
     :blue[*import necessary libraries*]
     
