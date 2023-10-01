@@ -37,7 +37,7 @@ data = {
 # Create a pie chart
 fig = px.pie(data, values='Value', names='Category', title='My Pie Chart')
 
-# Onglets
+# Onglets "Altair", "Plotly" &
 tab1, tab2 = st.tabs(["Altair", "Plotly"])
 
 with tab1:
