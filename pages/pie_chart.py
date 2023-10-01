@@ -56,3 +56,42 @@ with st.expander("Code"):
     
     st.altair_chart(chart)
     """)
+
+
+import plotly.express as px
+
+# Create a sample dataframe
+data = {
+  'Category': ['A', 'B', 'C', 'D', 'E'],
+  'Value': [10, 15, 7, 10, 8]
+}
+
+# Create a pie chart
+fig = px.pie(data, values='Value', names='Category', title='My Pie Chart')
+
+st.plotly_chart(fig)
+
+
+import streamlit as st
+
+col1, col2 = st.columns(2)
+
+with col1:
+   st.header("Altair")
+    st.altair_chart(chart)
+
+with col2:
+   st.header("Plotly")
+   st.plotly_chart(fig)
+
+
+
+
+
+
+
+
+
+
+
+
