@@ -6,11 +6,6 @@ st.title("Bienvenue dans la :blue[galerie graphique de l'analyste de données !]
 
 st.sidebar.success("Selectionner un graphique.")
 
-st.subheader("Formateur : Christian MUBA - Data Analyst RH")
-
-st.caption("*Master Gestion & Master Sciences (IAE Dijon & UB Dijon)*")
-
-st.caption("*Ancien coordinateur apprentissage CFA académique / Académie de Dijon*")
 
 st.caption("Vous souhaitez faire analyser vos data RH, prendre des décisions éclairées ou bénéficier d'un tutorat personnalisé ? contactez-moi 📧https://www.linkedin.com/in/chris-muba-io 🌍")
 
