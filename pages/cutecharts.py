@@ -1,20 +1,23 @@
-# import library
+
 import streamlit as st
-import cutecharts.charts as ctc
+import cutecharts
 
-# import data
-df=pd.DataFrame({
-  x:["Sun.","Mon.","Tue.","Wed.","Thu.","Fri.","Sat."],
-  y:[14, 15, 17, 20, 22.3, 23.7, 24.8],
-  z:[16, 16.4, 23.6, 24.5, 19.9, 13.6, 13.4]})
+# Data for the chart
+data = [10, 20, 30, 40, 50]
 
-# Bar Chart
-chart = ctc.Bar("Toronto Temperature",width="500px",height="400px")
-chart.set_options(
- labels=list(df[x]),
- x_label="Days",
- y_label="Temperature (Celsius)" ,
- colors=[#1EAFAE for i in range(len(df))]
+# Create a Streamlit app
+st.title("Bar Chart Example")
 
-chart.add_series('This week',list(df[y]))
-chart.render_notebook()
+# Create a Cutecharts chart
+chart = cutecharts.BarChart(
+    data=data,
+    orientation="h",
+    width=800,
+    height=400,
+    title="Bar Chart Example",
+    x_label="Values",
+    y_label="Frequency"
+)
+
+# Display the chart in the Streamlit app
+st.write(chart)
