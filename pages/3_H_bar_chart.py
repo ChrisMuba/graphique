@@ -137,71 +137,23 @@ with st.expander("Code *Plotly*"):
     """)
 
 with st.expander("Code *Matplotlib*"):
-    st.write("""
-
-    :blue[*import necessary libraries*]
-    
-    import matplotlib.pyplot as plt
-
-    :blue[*Create a sample dataframe*]
-    
-    data = {
-    'Category': ['A', 'B', 'C', 'D'],
-    'Value': [10, 15, 7, 10]
-    }
-
-    :blue[*Create a pie chart*]
-    
-   matplotlib_chart, ax = plt.subplots()
-   ax.pie(data['Value'], labels=data['Category'], autopct='%1.1f%%')
-   ax.set_title('My Pie Chart')
-
-    :blue[*Display Pie Chart*]
-    
-    st.pyplot(matplotlib_chart)
-    """)
-
-import streamlit as st
-
-code = '''def hello():
-    print("Hello, Streamlit!")'''
-st.code(code, language='python')
-
-
-import streamlit as st
-import matplotlib.pyplot as plt
-
-# Create a sample data
-x = [1, 2, 3, 4, 5]
-y = [10, 15, 7, 12, 8]
-
-# Create a line plot
-plt.plot(x, y)
-plt.xlabel('X')
-plt.ylabel('Y')
-plt.title('My Line Plot')
-
-# Display the plot
-st.pyplot(plt)
-
-# Display the code and plot within an expander
-with st.expander("Code and Plot"):
     # Display the code
     code = '''
 import matplotlib.pyplot as plt
 
 # Create a sample data
-x = [1, 2, 3, 4, 5]
-y = [10, 15, 7, 12, 8]
+data = {
+    'Category': ['A', 'B', 'C', 'D'],
+    'Value': [10, 15, 7, 10]
+    }
 
-# Create a line plot
-plt.plot(x, y)
-plt.xlabel('X')
-plt.ylabel('Y')
-plt.title('My Line Plot')
+# Create a bar chart with custom colors
+plt.barh(data['Category'], data['Value'], color=data['Color'])
+plt.xlabel('Value')
+plt.ylabel('Category')
+plt.title('My Horizontal Bar Chart')
 
-# Display the plot
-plt.show()
+# Display the code
 '''
     st.code(code, language='python')
 
