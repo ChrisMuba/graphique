@@ -152,9 +152,12 @@ plt.barh(data['Category'], data['Value'], color=data['Color'])
 plt.xlabel('Value')
 plt.ylabel('Category')
 plt.title('My Horizontal Bar Chart')
+Matplotlib Chart
 
-# Display the code
+# Display Matplotlib Horizontal Bar Chart
+st.pyplot(plt)
 '''
+  # Display the code
     st.code(code, language='python')
 
     
