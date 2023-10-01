@@ -4,9 +4,9 @@ import cutecharts.charts as ctc
 
 # import data
 df=pd.DataFrame({
-  x:["Sun.",’Mon.’,’Tue.’,’Wed.’,’Thu.’,’Fri.’,’Sat.’],
- ‘y’:[14,15,17,20,22.3,23.7,24.8],
- ‘z’:[16,16.4,23.6,24.5,19.9,13.6,13.4]})
+  x:["Sun.","Mon.","Tue.","Wed.","Thu.","Fri.","Sat."],
+  y:[14, 15, 17, 20, 22.3, 23.7, 24.8],
+  z:[16, 16.4, 23.6, 24.5, 19.9, 13.6, 13.4]})
 
 # Bar Chart
 chart = ctc.Bar(‘Toronto Temperature’,width=’500px’,height=’400px’)
