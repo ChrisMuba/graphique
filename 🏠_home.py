@@ -2,7 +2,7 @@
 
 import streamlit as st
 
-st.title("Bienvenue dans la :blue[galerie graphique de l'analyste de données !] 📊")
+st.title("Bienvenue dans la #FD504D[galerie graphique de l'analyste de données !] 📊")
 
 st.sidebar.success("Selectionner un graphique.📈")
 
