@@ -2,6 +2,17 @@
 
 import streamlit as st
 
+st.markdown(
+    """
+    <style>
+    .reportview-container {
+        background: url("images/image1.png");
+    }
+   </style>
+    """,
+    unsafe_allow_html=True
+)
+
 st.title("Bienvenue dans la :blue[galerie graphique de l'analyste de données !] 📊")
 
 st.sidebar.success("Cliquez sur un graphique.📈")
@@ -28,20 +39,6 @@ st.markdown("🎯**Vitrine de code** : notre application est conçue pour être 
 st.markdown("🎯**Comparaison des packages** : comparez la façon dont le même graphique peut être créé à l’aide de différents packages. Découvrez les avantages et les inconvénients de chaque approche.")
 
 st.markdown("🎯**Utile pour tous** : que vous soyez un analyste de données débutant cherchant à améliorer vos compétences en visualisation de données ou un professionnel chevronné en quête d'inspiration, notre avons quelque chose pour vous. Alors pourquoi attendre ? Commencez à explorer dès maintenant et faites passer votre visualisation de données au niveau supérieur !")
-
-
-import streamlit as st
-
-st.markdown(
-    """
-    <style>
-    .reportview-container {
-        background: url("images/image1.png");
-    }
-   </style>
-    """,
-    unsafe_allow_html=True
-)
 
 
 
