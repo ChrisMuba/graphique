@@ -36,7 +36,7 @@ st.markdown(
     """
     <style>
     .reportview-container {
-        background: url("path/to/your/image.jpg");
+        background: url("images/image1.png");
     }
    </style>
     """,
