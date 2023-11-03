@@ -7,7 +7,7 @@ import base64
 def get_base64(image_path):
     with open(image_path, "rb") as img_file:
         return base64.b64encode(img_file.read()).decode('utf-8')
-```
+
 
 def set_background(png_file):
     bin_str = get_base64(png_file)
@@ -20,10 +20,10 @@ def set_background(png_file):
     </style>
     ''' % bin_str
     st.markdown(page_bg_img, unsafe_allow_html=True)
- ```
+ 
 
 set_background('images/image1.png')
-    ```
+    
 
 
 
