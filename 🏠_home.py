@@ -30,6 +30,18 @@ st.markdown("🎯**Comparaison des packages** : comparez la façon dont le même
 st.markdown("🎯**Utile pour tous** : que vous soyez un analyste de données débutant cherchant à améliorer vos compétences en visualisation de données ou un professionnel chevronné en quête d'inspiration, notre avons quelque chose pour vous. Alors pourquoi attendre ? Commencez à explorer dès maintenant et faites passer votre visualisation de données au niveau supérieur !")
 
 
+import streamlit as st
+
+st.markdown(
+    """
+    <style>
+    .reportview-container {
+        background: url("path/to/your/image.jpg");
+    }
+   </style>
+    """,
+    unsafe_allow_html=True
+)
 
 
 
