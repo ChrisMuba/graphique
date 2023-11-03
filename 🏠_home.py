@@ -2,16 +2,35 @@
 
 import streamlit as st
 
-st.markdown(
-    """
+import base64
+
+def get_base64(image_path):
+    with open(image_path, "rb") as img_file:
+        return base64.b64encode(img_file.read()).decode('utf-8')
+```
+
+def set_background(png_file):
+    bin_str = get_base64(png_file)
+    page_bg_img = '''
     <style>
-    .reportview-container {
-        background: url("images/image1.png");
+    .stApp {
+    background-image: url("data:image/png;base64,%s");
+    background-size: cover;
     }
-   </style>
-    """,
-    unsafe_allow_html=True
-)
+    </style>
+    ''' % bin_str
+    st.markdown(page_bg_img, unsafe_allow_html=True)
+ ```
+
+set_background('path_to_your_image.png')
+    ```
+
+
+
+  
+
+
+
 
 st.title("Bienvenue dans la :blue[galerie graphique de l'analyste de données !] 📊")
 
