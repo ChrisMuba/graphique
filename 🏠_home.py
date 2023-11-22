@@ -22,7 +22,7 @@ def set_background(png_file):
     st.markdown(page_bg_img, unsafe_allow_html=True)
  
 
-set_background('images/renoi_pop_art.png')
+set_background('images/BI_dashboard_background.png')
     
 
 
